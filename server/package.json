@@ -1,0 +1,22 @@
+{
+  "name": "MERN-template",
+  "version": "0.1.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "watch": "nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "console-table-printer": "^2.12.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "work-tools",
+  "version": "0.1.0",
+  "description": "frontend for tools ive made to make my life easier at work",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd server/ && node server.js",
+    "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "build": "cd client && npm run build",
+    "seed": "cd server && node seeds/seeds.js",
+    "update": "ncu && ncu -u && cd server && ncu && ncu -u && cd ../client && ncu && ncu -u"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrapich/work-tools.git"
+  },
+  "author": "https://github.com/jrapich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jrapich/work-tools/issues"
+  },
+  "homepage": "https://github.com/jrapich/work-tools#readme",
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.3",
+    "dotenv": "^16.4.5",
+    "vite": "^5.4.10"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
