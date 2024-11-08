@@ -7,31 +7,35 @@ const colors = {
   airForceBlue: "#597e9b",
   spaceCadetBlue: "#27293f",
   raisinBlack: "#181d27",
+  backgroundBlack:"#0A0903",
+  darkOrangeRed:"#FF0000",
+  darkerOrange: "#FF4800",
+  darkOrange: "#FF6000",
+  brightOrange:"#FF8200",
+  orangeYellow: "#FFC100",
 };
 
 // Create our theme palette
 let theme = createTheme({
   palette: {
-    text: {
-      main: colors.jade,
-    },
+    // text: {
+    //   main: colors.darkOrange,
+    // },
     background: {
-      main: colors.spaceCadetBlue,
+      main: colors.backgroundBlack,
     },
     primary: {
-      main: colors.airForceBlue,
-      contrastText: colors.jade,
+      main: colors.darkOrange,
     },
     secondary: {
-      main: colors.raisinBlack,
-      contrastText: colors.jade,
+      main: colors.spaceCadetBlue,
     },
     tertiary: {
       main: colors.silver,
     },
-    accent: {
-      main: colors.jade,
-    },
+    // accent: {
+    //   main: colors.jade,
+    // },
   },
 });
 
@@ -43,7 +47,7 @@ theme = createTheme(theme, {
       styleOverrides: {
         body: {
           backgroundColor: theme.palette.background.main,
-          color: theme.palette.text.main,
+          color: theme.palette.primary.main,
         },
       },
     },
@@ -62,63 +66,63 @@ theme = createTheme(theme, {
         },
       },
     },
-    MuiCard: {
-      styleOverrides: {
-        root: {
-          borderColor: theme.palette.secondary.main,
-        },
-      },
-    },
-    MuiCardContent: {
-      styleOverrides: {
-        root: {
-          color: theme.palette.text.main,
-          backgroundColor: theme.palette.primary.dark,
-          borderColor: theme.palette.secondary.main,
-        },
-      },
-    },
-    MuiCardActions: {
-      styleOverrides: {
-        root: {
-          color: theme.palette.text.main,
-          backgroundColor: theme.palette.secondary.main,
-          borderColor: theme.palette.secondary.main,
-        },
-      },
-    },
+    // MuiCard: {
+    //   styleOverrides: {
+    //     root: {
+    //       borderColor: theme.palette.secondary.main,
+    //     },
+    //   },
+    // },
+    // MuiCardContent: {
+    //   styleOverrides: {
+    //     root: {
+    //       color: theme.palette.primary.main,
+    //       //backgroundColor: theme.palette.primary.dark,
+    //       //borderColor: theme.palette.secondary.main,
+    //     },
+    //   },
+    // },
+    // MuiCardActions: {
+    //   styleOverrides: {
+    //     root: {
+    //       color: theme.palette.primary.main,
+    //       backgroundColor: theme.palette.secondary.main,
+    //       borderColor: theme.palette.secondary.main,
+    //     },
+    //   },
+    // },
     MuiInputLabel: {
       styleOverrides: {
         root: {
-          color: theme.palette.text.main,
+          color: theme.palette.primary.main,
         },
       },
     },
     MuiOutlinedInput: {
       styleOverrides: {
         root: {
-          color: theme.palette.text.main,
-          marginBottom: "5px",
-          "& .MuiOutlinedInput-notchedOutline": {
-            borderColor: theme.palette.secondary,
-          },
-          "&.Mui-focused": {
-            "& .MuiOutlinedInput-notchedOutline": {
-              "& legend": {
-                overflow: "initial",
-                textAlign: "right",
-                "& span": {
-                  opacity: "100",
-                },
-              },
-            },
-          },
-          "&:hover .MuiOutlinedInput-notchedOutline": {
-            borderColor: theme.palette.text.main,
-          },
-          "& .MuiOutlinedInput-input": {
-            color: theme.palette.text.main,
-          },
+          color: theme.palette.primary.main,
+          // marginBottom: "5px",
+          // "& .MuiOutlinedInput-notchedOutline": {
+          //   borderColor: theme.palette.secondary,
+          // },
+          // "&.Mui-focused": {
+          //   "& .MuiOutlinedInput-notchedOutline": {
+          //     "& legend": {
+          //       overflow: "initial",
+          //       primaryAlign: "right",
+          //       "& span": {
+          //         opacity: "100",
+          //       },
+          //     },
+          //   },
+          // },
+          // "&:hover .MuiOutlinedInput-notchedOutline": {
+          //   borderColor: theme.palette.primary.main,
+          // },
+          // "& .MuiOutlinedInput-input": {
+          //   color: theme.palette.primary.main,
+          // },
         },
       },
     },
@@ -126,10 +130,10 @@ theme = createTheme(theme, {
       styleOverrides: {
         root: {
           borderColor: theme.palette.tertiary.main,
-          color: theme.palette.text.main,
+          color: theme.palette.primary.main,
           "&:hover": {
-            color: theme.palette.warning.main,
-            backgroundColor: theme.palette.secondary.dark,
+            //color: theme.palette.warning.main,
+            backgroundColor: theme.palette.secondary.main,
           },
         },
       },
