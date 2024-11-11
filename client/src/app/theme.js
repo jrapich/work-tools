@@ -40,7 +40,6 @@ let theme = createTheme({
 });
 
 //create the theme with MUI
-//this is custom/colors boilerplate for an early version of a basic site. youll want to customize this as your own.
 theme = createTheme(theme, {
   components: {
     MuiCssBaseline: {
@@ -54,7 +53,8 @@ theme = createTheme(theme, {
     MuiToolbar: {
       styleOverrides: {
         root: {
-          backgroundColor: theme.palette.secondary.main,
+          color: theme.palette.primary.main,
+          backgroundColor: theme.palette.background.main,
         },
       },
     },
@@ -66,13 +66,6 @@ theme = createTheme(theme, {
         },
       },
     },
-    // MuiCard: {
-    //   styleOverrides: {
-    //     root: {
-    //       borderColor: theme.palette.secondary.main,
-    //     },
-    //   },
-    // },
     // MuiCardContent: {
     //   styleOverrides: {
     //     root: {
