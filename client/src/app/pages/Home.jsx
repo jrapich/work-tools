@@ -19,79 +19,57 @@ export default function Home() {
   return (
     <>
       <section>
-        <Box
-          sx={{
-            pt: 4,
-            pb: 4,
-            borderLeft: 0.5,
-            borderRight: 0.5,
-            borderColor: theme.palette.tertiary.main,
-            borderRadius: 10,
-          }}
-        >
-          <Container maxWidth="md">
-            <Typography component="h1" variant="h2" align="center" gutterBottom>
-              <i>Welcome</i>
-            </Typography>
-            <Typography variant="h5" align="center" paragraph>
-              paragraph describing your app
-            </Typography>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "flex-start",
-                backgroundColor: "whitesmoke",
-                flexWrap: "wrap",
-              }}
+        <Container maxWidth="md">
+          <Typography component="h1" variant="h2" align="center" gutterBottom>
+            <i>Welcome</i>
+          </Typography>
+          <Typography variant="h5" align="center" paragraph>
+            paragraph describing your app
+          </Typography>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "flex-start",
+              flexWrap: "wrap",
+            }}
+          >
+            <Typography
+              variant="h6"
+              sx={{ px: 2, color: theme.palette.primary.main }}
             >
-              <Typography variant="h6" sx={{ px: 2 }}>
-                main text color "jade"
-              </Typography>
-              <Typography
-                variant="h6"
-                sx={{ px: 2, color: theme.palette.primary.main }}
-              >
-                primary color "air force blue"
-              </Typography>
-              <Typography
-                variant="h6"
-                sx={{ px: 2, color: theme.palette.secondary.main }}
-              >
-                secondary color "raisin black"
-              </Typography>
-              <Typography
-                variant="h6"
-                sx={{ px: 2, color: theme.palette.tertiary.main }}
-              >
-                tertiary color "silver"
-              </Typography>
-            </Box>
-            <Typography variant="h6" align="center" sx={{ pt: 4 }} paragraph>
-              checkout theme.js for customizing your colors!
+              primary color "dark orange"
             </Typography>
-            <Stack
-              sx={{ pb: 2 }}
-              direction="row"
-              spacing={2}
-              justifyContent="center"
+            <Typography
+              variant="h6"
+              sx={{ px: 2, color: theme.palette.secondary.main }}
             >
-              <Button variant="outlined">Click here</Button>
-              <Button variant="outlined">Or Here</Button>
-            </Stack>
-          </Container>
-        </Box>
-        <Divider component="div" role="presentation">
-          <Typography>fancy divider</Typography>
-        </Divider>
+              secondary color "spaceCadetBlue"
+            </Typography>
+            <Typography
+              variant="h6"
+              sx={{ px: 2, color: theme.palette.tertiary.main }}
+            >
+              tertiary color "silver"
+            </Typography>
+          </Box>
+          <Typography variant="h6" align="center" sx={{ pt: 4 }} paragraph>
+            checkout theme.js for customizing your colors!
+          </Typography>
+          <Stack
+            sx={{ pb: 2 }}
+            direction="row"
+            spacing={2}
+            justifyContent="center"
+          >
+            <Button variant="outlined">Click here</Button>
+            <Button variant="outlined">Or Here</Button>
+          </Stack>
+        </Container>
+        <Divider component="div" role="presentation" />
         <Container
           sx={{
             paddingTop: 2,
             paddingBottom: 4,
-            borderLeft: 0.5,
-            borderRight: 0.5,
-            borderBottom: 0.5,
-            borderColor: theme.palette.tertiary.main,
-            borderRadius: 10,
           }}
           maxWidth="md"
         >
@@ -115,18 +93,20 @@ export default function Home() {
                       pt: "56.25%",
                       backgroundSize: "cover",
                     }}
-                    image="https://source.unsplash.com/random?wallpapers"
+                    //image="https://source.unsplash.com/random?wallpapers"
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Card Name
+                    <Typography
+                      variant="h5"
+                      component="h2"
+                      sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                      }}
+                    >
+                      Clickable Tool Name
                     </Typography>
-                    <Typography>Card Description</Typography>
                   </CardContent>
-                  <CardActions>
-                    <Button size="small">view</Button>
-                    <Button size="small">edit</Button>
-                  </CardActions>
                 </Card>
               </Grid>
             ))}

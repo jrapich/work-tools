@@ -138,6 +138,14 @@ theme = createTheme(theme, {
         },
       },
     },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          color: theme.palette.primary.main,
+          backgroundColor: theme.palette.background.main,
+        },
+      },
+    },
   },
 });
 
