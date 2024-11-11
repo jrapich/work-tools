@@ -19,17 +19,8 @@ export default function Home() {
   return (
     <>
       <section>
-        <Box
-          sx={{
-            pt: 4,
-            pb: 4,
-            borderLeft: 0.5,
-            borderRight: 0.5,
-            borderColor: theme.palette.tertiary.main,
-            borderRadius: 10,
-          }}
-        >
-          <Container maxWidth="md">
+        <Container maxWidth="md">
+          <Container>
             <Typography component="h1" variant="h2" align="center" gutterBottom>
               <i>Welcome</i>
             </Typography>
@@ -40,24 +31,20 @@ export default function Home() {
               sx={{
                 display: "flex",
                 justifyContent: "flex-start",
-                backgroundColor: "whitesmoke",
-                flexWrap: "wrap",
+                flexWrap: "nowrap",
               }}
             >
-              <Typography variant="h6" sx={{ px: 2 }}>
-                main text color "jade"
-              </Typography>
               <Typography
                 variant="h6"
                 sx={{ px: 2, color: theme.palette.primary.main }}
               >
-                primary color "air force blue"
+                primary color "dark orange"
               </Typography>
               <Typography
                 variant="h6"
                 sx={{ px: 2, color: theme.palette.secondary.main }}
               >
-                secondary color "raisin black"
+                secondary color "spaceCadetBlue"
               </Typography>
               <Typography
                 variant="h6"
@@ -66,10 +53,10 @@ export default function Home() {
                 tertiary color "silver"
               </Typography>
             </Box>
-            <Typography variant="h6" align="center" sx={{ pt: 4 }} paragraph>
+            <Typography variant="h6" align="center" sx={{ pt: 4, pb: 2 }} paragraph>
               checkout theme.js for customizing your colors!
             </Typography>
-            <Stack
+            {/* <Stack
               sx={{ pb: 2 }}
               direction="row"
               spacing={2}
@@ -77,60 +64,54 @@ export default function Home() {
             >
               <Button variant="outlined">Click here</Button>
               <Button variant="outlined">Or Here</Button>
-            </Stack>
+            </Stack> */}
           </Container>
-        </Box>
-        <Divider component="div" role="presentation">
-          <Typography>fancy divider</Typography>
-        </Divider>
-        <Container
-          sx={{
-            paddingTop: 2,
-            paddingBottom: 4,
-            borderLeft: 0.5,
-            borderRight: 0.5,
-            borderBottom: 0.5,
-            borderColor: theme.palette.tertiary.main,
-            borderRadius: 10,
-          }}
-          maxWidth="md"
-        >
-          <Grid container spacing={4}>
-            {cards.map((card) => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
-                <Card
-                  sx={{
-                    height: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                    border: 0.5,
-                    borderRadius: 10,
-                    borderColor: theme.palette.tertiary.main,
-                  }}
-                >
-                  <CardMedia
-                    component="div"
+          <Divider component="div" role="presentation" />
+          <Container
+            sx={{
+              paddingTop: 4,
+              paddingBottom: 4,
+            }}
+          >
+            <Grid container spacing={4}>
+              {cards.map((card) => (
+                <Grid item key={card} xs={12} sm={6} md={4}>
+                  <Card
                     sx={{
-                      // 16:9
-                      pt: "56.25%",
-                      backgroundSize: "cover",
+                      height: "100%",
+                      display: "flex",
+                      flexDirection: "column",
+                      border: 0.5,
+                      borderRadius: 10,
+                      borderColor: theme.palette.tertiary.main,
                     }}
-                    image="https://source.unsplash.com/random?wallpapers"
-                  />
-                  <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Card Name
-                    </Typography>
-                    <Typography>Card Description</Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small">view</Button>
-                    <Button size="small">edit</Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
+                  >
+                    <CardMedia
+                      component="div"
+                      sx={{
+                        // 16:9
+                        pt: "56.25%",
+                        backgroundSize: "cover",
+                      }}
+                      //image="https://source.unsplash.com/random?wallpapers"
+                    />
+                    <CardContent sx={{ flexGrow: 1 }}>
+                      <Typography
+                        variant="h5"
+                        component="h2"
+                        sx={{
+                          display: "flex",
+                          justifyContent: "center",
+                        }}
+                      >
+                        Clickable Tool Name
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              ))}
+            </Grid>
+          </Container>
         </Container>
       </section>
     </>
