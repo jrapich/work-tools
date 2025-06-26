@@ -3,16 +3,25 @@ import { createTheme } from "@mui/material/styles";
 //color palette object. customize the colors as you see fit
 const colors = {
   silver: "#c2c2c2",
+  lightSilver: "#d6d6d6",
   jade: "#5bae6a",
   airForceBlue: "#597e9b",
   spaceCadetBlue: "#27293f",
+  deepSkyBlue: "#00B7FF",
+  tangBlue: "#2B5BCC",
+  royalBlue:"#4672D8",
+  onyx: "#666666",
+  jetGrey: "#292929",
   raisinBlack: "#181d27",
   backgroundBlack:"#0A0903",
+  flame: "#EB5F2D",
   darkOrangeRed:"#FF0000",
   darkerOrange: "#FF4800",
   darkOrange: "#FF6000",
   brightOrange:"#FF8200",
+  apricot: "#FCCDAD",
   orangeYellow: "#FFC100",
+  pureWhite: "#FFFFFF",
 };
 
 // Create our theme palette
@@ -23,15 +32,27 @@ let theme = createTheme({
     // },
     background: {
       main: colors.backgroundBlack,
+      desc: "background color, background black"
     },
     primary: {
-      main: colors.darkOrange,
+      main: colors.jetGrey,
+      desc: "primary color, 60%(background)",
     },
     secondary: {
-      main: colors.spaceCadetBlue,
+      main: colors.backgroundBlack,
+      desc: "secondary color. 30%(elements)",
     },
     tertiary: {
       main: colors.silver,
+      desc: "tertiary color, 10%(text and borders)",
+    },
+    border: {
+      main: colors.silver,
+      desc: "border color of some elements",
+    },
+    white: {
+      main: colors.pureWhite,
+      desc: "pure white",
     },
     // accent: {
     //   main: colors.jade,
@@ -45,24 +66,24 @@ theme = createTheme(theme, {
     MuiCssBaseline: {
       styleOverrides: {
         body: {
-          backgroundColor: theme.palette.background.main,
-          color: theme.palette.primary.main,
+          backgroundColor: theme.palette.primary.main,
+          color: theme.palette.tertiary.main,
         },
       },
     },
     MuiToolbar: {
       styleOverrides: {
         root: {
-          color: theme.palette.primary.main,
-          backgroundColor: theme.palette.background.main,
+          color: theme.palette.tertiary.main,
+          backgroundColor: theme.palette.secondary.main,
         },
       },
     },
     MuiDivider: {
       styleOverrides: {
         root: {
-          borderTop: `solid ${theme.palette.primary.dark}`,
-          borderBottom: `solid ${theme.palette.primary.dark}`,
+          borderTop: `solid ${theme.palette.tertiary.main}`,
+          borderBottom: `solid ${theme.palette.tertiary.main}`,
         },
       },
     },
@@ -87,14 +108,14 @@ theme = createTheme(theme, {
     MuiInputLabel: {
       styleOverrides: {
         root: {
-          color: theme.palette.primary.main,
+          color: theme.palette.secondary.main,
         },
       },
     },
     MuiOutlinedInput: {
       styleOverrides: {
         root: {
-          color: theme.palette.primary.main,
+          color: theme.palette.secondary.main,
           // marginBottom: "5px",
           // "& .MuiOutlinedInput-notchedOutline": {
           //   borderColor: theme.palette.secondary,
@@ -123,10 +144,10 @@ theme = createTheme(theme, {
       styleOverrides: {
         root: {
           borderColor: theme.palette.tertiary.main,
-          color: theme.palette.primary.main,
+          color: theme.palette.secondary.main,
           "&:hover": {
             //color: theme.palette.warning.main,
-            backgroundColor: theme.palette.secondary.main,
+            backgroundColor: theme.palette.primary.main,
           },
         },
       },
@@ -134,8 +155,8 @@ theme = createTheme(theme, {
     MuiCard: {
       styleOverrides: {
         root: {
-          color: theme.palette.primary.main,
-          backgroundColor: theme.palette.background.main,
+          color: theme.palette.tertiary.main,
+          backgroundColor: theme.palette.secondary.main,
         },
       },
     },

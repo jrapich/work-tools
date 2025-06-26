@@ -25,35 +25,50 @@ export default function Home() {
               <i>Welcome</i>
             </Typography>
             <Typography variant="h5" align="center" paragraph>
-              paragraph describing your app
+              colors should follow the 60:30:10 rule
             </Typography>
             <Box
               sx={{
                 display: "flex",
-                justifyContent: "flex-start",
+                justifyContent: "center",
                 flexWrap: "nowrap",
               }}
             >
               <Typography
                 variant="h6"
-                sx={{ px: 2, color: theme.palette.primary.main }}
+                sx={{
+                  px: 2,
+                  color: theme.palette.primary.main,
+                  backgroundColor: theme.palette.white.main,
+                }}
               >
-                primary color "dark orange"
+                {theme.palette.primary.desc}, with pure white background for contrast
               </Typography>
               <Typography
                 variant="h6"
                 sx={{ px: 2, color: theme.palette.secondary.main }}
               >
-                secondary color "spaceCadetBlue"
+                {theme.palette.secondary.desc}
               </Typography>
               <Typography
                 variant="h6"
                 sx={{ px: 2, color: theme.palette.tertiary.main }}
               >
-                tertiary color "silver"
+                {theme.palette.tertiary.desc}
+              </Typography>
+              <Typography
+                variant="h6"
+                sx={{ px: 2, color: theme.palette.border.main }}
+              >
+                {theme.palette.border.desc}
               </Typography>
             </Box>
-            <Typography variant="h6" align="center" sx={{ pt: 4, pb: 2 }} paragraph>
+            <Typography
+              variant="h6"
+              align="center"
+              sx={{ pt: 4, pb: 2 }}
+              paragraph
+            >
               checkout theme.js for customizing your colors!
             </Typography>
             {/* <Stack
@@ -83,7 +98,7 @@ export default function Home() {
                       flexDirection: "column",
                       border: 0.5,
                       borderRadius: 10,
-                      borderColor: theme.palette.tertiary.main,
+                      borderColor: theme.palette.border.main,
                     }}
                   >
                     <CardMedia
