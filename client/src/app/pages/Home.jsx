@@ -19,12 +19,7 @@ export default function Home() {
   return (
     <>
       <section>
-        <Container
-          maxWidth="md"
-          sx={{
-            mt: 8,
-          }}
-        >
+        <Container maxWidth="md">
           <Container>
             <Typography component="h1" variant="h2" align="center" gutterBottom>
               <i>Welcome</i>

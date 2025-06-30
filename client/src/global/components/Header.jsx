@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Typography, Container } from "@mui/material";
+import { AppBar, Typography, Container } from "@mui/material";
 import { Link } from "react-router-dom";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 
@@ -9,15 +9,16 @@ import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 export default function Header() {
   return (
     <>
-      <AppBar position="fixed">
+      <AppBar position="fixed" sx={{ mb: 8 }}>
         <Container sx={{ pt: 1 }}>
           <Typography variant="h5" color="inherit" align="center" noWrap>
-            <Link to={"/"}>
+            <Link to={"/h"}>
               <HomeOutlinedIcon fontSize="large" />
             </Link>
           </Typography>
         </Container>
       </AppBar>
+      <Container sx={{ pb: 8 }}></Container>
     </>
   );
 }
