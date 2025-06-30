@@ -1,5 +1,7 @@
 import { AppBar, Toolbar, Typography, Container } from "@mui/material";
 import { Link } from "react-router-dom";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+
 //make link comp
 //onclick: navigate to /, or
 //button or link inside header, to /, or
@@ -7,14 +9,14 @@ import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <>
-      <AppBar position="sticky">
-        <Toolbar>
-          <Container>
-            <Typography variant="h5" color="inherit" align="center" noWrap>
-              clickable home link
-            </Typography>
-          </Container>
-        </Toolbar>
+      <AppBar position="fixed">
+        <Container sx={{ pt: 1 }}>
+          <Typography variant="h5" color="inherit" align="center" noWrap>
+            <Link to={"/"}>
+              <HomeOutlinedIcon fontSize="large" />
+            </Link>
+          </Typography>
+        </Container>
       </AppBar>
     </>
   );

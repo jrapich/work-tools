@@ -19,7 +19,12 @@ export default function Home() {
   return (
     <>
       <section>
-        <Container maxWidth="md">
+        <Container
+          maxWidth="md"
+          sx={{
+            mt: 8,
+          }}
+        >
           <Container>
             <Typography component="h1" variant="h2" align="center" gutterBottom>
               <i>Welcome</i>
@@ -31,7 +36,7 @@ export default function Home() {
               sx={{
                 display: "flex",
                 justifyContent: "center",
-                flexWrap: "nowrap",
+                flexWrap: "wrap",
               }}
             >
               <Typography
@@ -42,7 +47,8 @@ export default function Home() {
                   backgroundColor: theme.palette.white.main,
                 }}
               >
-                {theme.palette.primary.desc}, with pure white background for contrast
+                {theme.palette.primary.desc}, with pure white background for
+                contrast
               </Typography>
               <Typography
                 variant="h6"
