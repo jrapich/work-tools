@@ -12,7 +12,7 @@ export default function Header() {
       <AppBar position="fixed" sx={{ mb: 8 }}>
         <Container sx={{ pt: 1 }}>
           <Typography variant="h5" color="inherit" align="center" noWrap>
-            <Link to={"/h"}>
+            <Link to={"/"}>
               <HomeOutlinedIcon fontSize="large" />
             </Link>
           </Typography>
