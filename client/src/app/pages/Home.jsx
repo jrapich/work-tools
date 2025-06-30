@@ -1,9 +1,4 @@
-import {
-  Box,
-  Container,
-  Typography,
-  Divider,
-} from "@mui/material";
+import { Box, Container, Typography, Divider } from "@mui/material";
 import theme from "../theme";
 import { CardLink } from "../../global/components/index.js";
 
