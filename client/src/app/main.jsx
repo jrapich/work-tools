@@ -7,7 +7,7 @@ import { CssBaseline, Container, Box } from "@mui/material";
 import theme from "./theme";
 
 import { Home, Error } from "./pages/index.js";
-import { Header, Footer } from "./components/index.js";
+import { Header, Footer } from "../global/components/index.js";
 
 function App(error) {
   return (
