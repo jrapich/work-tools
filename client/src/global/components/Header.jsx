@@ -9,7 +9,7 @@ import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 export default function Header() {
   return (
     <>
-      <AppBar position="fixed" sx={{ mb: 8 }}>
+      <AppBar position="fixed" sx={{ mb: 8 }} component={"header"}>
         <Container sx={{ pt: 1 }}>
           <Typography variant="h5" color="inherit" align="center" noWrap>
             <Link to={"/"}>
