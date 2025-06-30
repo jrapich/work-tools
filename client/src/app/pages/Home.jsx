@@ -1,19 +1,6 @@
-import {
-  Box,
-  Container,
-  Typography,
-  Stack,
-  Button,
-  Grid,
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Divider,
-} from "@mui/material";
+import { Box, Container, Typography, Divider } from "@mui/material";
 import theme from "../theme";
-
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+import { CardLink } from "../../global/components/index.js";
 
 export default function Home() {
   return (
@@ -31,7 +18,7 @@ export default function Home() {
               sx={{
                 display: "flex",
                 justifyContent: "center",
-                flexWrap: "nowrap",
+                flexWrap: "wrap",
               }}
             >
               <Typography
@@ -42,7 +29,8 @@ export default function Home() {
                   backgroundColor: theme.palette.white.main,
                 }}
               >
-                {theme.palette.primary.desc}, with pure white background for contrast
+                {theme.palette.primary.desc}, with pure white background for
+                contrast
               </Typography>
               <Typography
                 variant="h6"
@@ -88,44 +76,7 @@ export default function Home() {
               paddingBottom: 4,
             }}
           >
-            <Grid container spacing={4}>
-              {cards.map((card) => (
-                <Grid item key={card} xs={12} sm={6} md={4}>
-                  <Card
-                    sx={{
-                      height: "100%",
-                      display: "flex",
-                      flexDirection: "column",
-                      border: 0.5,
-                      borderRadius: 10,
-                      borderColor: theme.palette.border.main,
-                    }}
-                  >
-                    <CardMedia
-                      component="div"
-                      sx={{
-                        // 16:9
-                        pt: "56.25%",
-                        backgroundSize: "cover",
-                      }}
-                      //image="https://source.unsplash.com/random?wallpapers"
-                    />
-                    <CardContent sx={{ flexGrow: 1 }}>
-                      <Typography
-                        variant="h5"
-                        component="h2"
-                        sx={{
-                          display: "flex",
-                          justifyContent: "center",
-                        }}
-                      >
-                        Clickable Tool Name
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-              ))}
-            </Grid>
+            <CardLink />
           </Container>
         </Container>
       </section>

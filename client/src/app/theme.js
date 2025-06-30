@@ -9,16 +9,16 @@ const colors = {
   spaceCadetBlue: "#27293f",
   deepSkyBlue: "#00B7FF",
   tangBlue: "#2B5BCC",
-  royalBlue:"#4672D8",
+  royalBlue: "#4672D8",
   onyx: "#666666",
   jetGrey: "#292929",
   raisinBlack: "#181d27",
-  backgroundBlack:"#0A0903",
+  backgroundBlack: "#0A0903",
   flame: "#EB5F2D",
-  darkOrangeRed:"#FF0000",
+  darkOrangeRed: "#FF0000",
   darkerOrange: "#FF4800",
   darkOrange: "#FF6000",
-  brightOrange:"#FF8200",
+  brightOrange: "#FF8200",
   apricot: "#FCCDAD",
   orangeYellow: "#FFC100",
   pureWhite: "#FFFFFF",
@@ -32,7 +32,7 @@ let theme = createTheme({
     // },
     background: {
       main: colors.backgroundBlack,
-      desc: "background color, background black"
+      desc: "background color, background black",
     },
     primary: {
       main: colors.jetGrey,
@@ -71,7 +71,7 @@ theme = createTheme(theme, {
         },
       },
     },
-    MuiToolbar: {
+    MuiAppBar: {
       styleOverrides: {
         root: {
           color: theme.palette.tertiary.main,
@@ -84,6 +84,13 @@ theme = createTheme(theme, {
         root: {
           borderTop: `solid ${theme.palette.tertiary.main}`,
           borderBottom: `solid ${theme.palette.tertiary.main}`,
+        },
+      },
+    },
+    MuiSvgIcon: {
+      styleOverrides: {
+        root: {
+          color: theme.palette.tertiary.main,
         },
       },
     },

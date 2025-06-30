@@ -7,11 +7,23 @@ export default function ErrorPage() {
 
   return (
     <Container>
-      <Typography variant="h1">
-        An Error has occurred/Page not found!
+      <Typography
+        component={"h1"}
+        variant="h2"
+        align={"center"}
+        sx={{ m: 4, mb: 20 }}
+      >
+        something went wrong
       </Typography>
-      <Typography variant="h1">{error.status}</Typography>
-      <Typography variant="body1">{error?.statusText}</Typography>
+      <Typography variant="h2" align="center">
+        {error.status}
+      </Typography>
+      <Typography variant="body1" align="center" sx={{ mb: 20 }}>
+        {error?.statusText}
+      </Typography>
+      <Typography variant="body2" align="center" sx={{ mb: 80 }}>
+        {error.data}
+      </Typography>
     </Container>
   );
 }
