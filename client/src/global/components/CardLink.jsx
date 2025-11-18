@@ -8,16 +8,24 @@ import {
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import theme from "../../app/theme";
+import features from "../../features/index";
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const routes = [];
+const titles = [];
+for (let i = 0; i < features.length; i++) {
+  routes.push(features[i].route);
+  titles.push(features[i].title);
+}
+
+//const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 export default function CardLink() {
   const [selectedCard, setSelectedCard] = useState(undefined);
 
   return (
     <Grid container spacing={4}>
-      {cards.map((card, index) => (
-        <Grid item key={card} xs={12} sm={6} md={4}>
+      {routes.map((route, index) => (
+        <Grid item key={route} xs={12} sm={6} md={4}>
           <Card
             sx={{
               height: "100%",
@@ -43,7 +51,7 @@ export default function CardLink() {
               <CardContent sx={{ flexGrow: 1 }}>
                 <Link
                   style={{ color: "inherit", textDecoration: "none" }}
-                  to={"/"}
+                  to={route}
                 >
                   <Typography
                     align="center"
@@ -55,7 +63,7 @@ export default function CardLink() {
                       color: theme.palette.tertiary.main,
                     }}
                   >
-                    {card}
+                    {titles[index]}
                   </Typography>
                 </Link>
               </CardContent>
