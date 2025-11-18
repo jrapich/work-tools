@@ -11,12 +11,12 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "console-table-printer": "^2.12.1",
-    "dotenv": "^16.4.5",
-    "express": "^4.21.1",
+    "console-table-printer": "^2.15.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "nodemon": "^3.1.7"
+    "nodemon": "^3.1.11"
   }
 }

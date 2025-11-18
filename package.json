@@ -23,11 +23,11 @@
   },
   "homepage": "https://github.com/jrapich/work-tools#readme",
   "dependencies": {
-    "@vitejs/plugin-react": "^4.3.3",
-    "dotenv": "^16.4.5",
-    "vite": "^5.4.10"
+    "@vitejs/plugin-react": "^5.1.1",
+    "dotenv": "^17.2.3",
+    "vite": "^7.2.2"
   },
   "devDependencies": {
-    "concurrently": "^9.0.1"
+    "concurrently": "^9.2.1"
   }
 }
